@@ -13,20 +13,10 @@ for i = 1:N
                                 switch (abs(x) + abs(y) + abs(z))
                                     case 0
                                         solid(i+x,j+y,k+z) = 1;
-                                    case 1             % face neighbour
-                                        if x~=0
+                                    case 1             % face neighbour                           
                                             if (rand() < ps(i,j,k))
                                                 solid(i+x,j+y,k+z) = 1;
                                             end
-                                        elseif y~=0
-                                            if (rand() < ps(i,j,k))
-                                                solid(i+x,j+y,k+z) = 1;
-                                            end
-                                        elseif z~=0
-                                            if (rand() < ps(i,j,k))
-                                                solid(i+x,j+y,k+z) = 1;
-                                            end
-                                        end
                                     case 2             % edge neighbour
                                         pe = ps(i,j,k);
                                         if (rand() < 0.125*pe)
