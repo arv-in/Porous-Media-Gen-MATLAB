@@ -1,6 +1,6 @@
 function [solid] = grow(s1,N,phi,ps)
 solid = zeros(N,N,N);
-phi_c =1;    % Initially no matrix => poroosity =1
+phi_c =1;    % Initially no matrix => porosity =1
 while (phi_c>phi)
 for i = 1:N
     for j = 1:N
